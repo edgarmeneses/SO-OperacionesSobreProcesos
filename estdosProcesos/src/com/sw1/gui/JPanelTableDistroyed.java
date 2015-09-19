@@ -40,7 +40,7 @@ public class JPanelTableDistroyed extends JPanel {
 
 	public void removeTable(){
 
-		tableDistroyed.setModel(new FinishedTableModel(transition));
+		tableDistroyed.setModel(new DistroyedTableModel(transition));
 		tableDistroyed.repaint();
 
 	}

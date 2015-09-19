@@ -18,7 +18,7 @@ import com.sw1.logic.Transition;
 
 public class ReadyTableModel extends AbstractTableModel implements Runnable{
 
-	private static final String [] COLUMNNAMES={"Nombre","Prioridad","tiempo","Bloqueo","Ejecutado","Comunicado","Reiniciado","Destruido"};
+	private static final String [] COLUMNNAMES={"Nombre","Tiempo","Prioridad","Bloqueo","Ejecutado","Comunicado","Reiniciado","Destruido"};
 	private static final Class[] COLUMNSTYPES ={String.class,Integer.class,Integer.class,Boolean.class,Boolean.class,Boolean.class,Boolean.class,Boolean.class};
 	private ArrayList<Object[]> data;
 	private Transition transition;
@@ -33,13 +33,13 @@ public class ReadyTableModel extends AbstractTableModel implements Runnable{
 	
 	public void fill(){
 		for (Process process : transition.getReady().getReady()) {
-			data.add(fillRow(process.getName(),process.getPriority(),process.getTime(),process.isLocked(),
+			data.add(fillRow(process.getName(),process.getTime(),process.getPriority(),process.isLocked(),
 					process.isRunning(),process.isComunicate(),process.isRestart(),process.isDestroyed()));
 		}
 		
 	}
 
-	public Object[] fillRow(String name, int priority, int time, boolean isBlock, boolean isRunning, boolean isComunicate, boolean isRestart,boolean isDestroyed){
+	public Object[] fillRow(String name, int time, int priority, boolean isBlock, boolean isRunning, boolean isComunicate, boolean isRestart,boolean isDestroyed){
 		return new Object[]{name,priority,time,isBlock,isRunning,isComunicate,isRestart,isDestroyed};
 	}
 	

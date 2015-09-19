@@ -16,6 +16,7 @@ public class JPanelFunction extends JPanel{
 	private JPanelTableTimeout timeout;
 	private JPanelTableDistroyed distroyed;
 	private JPanelTableRestart restart;
+	private JPanelTableComunicate comunicate;
 	private JPanelReady ready;
 	private JPanelProcess process;
 	private Transition transition;
@@ -35,9 +36,14 @@ public class JPanelFunction extends JPanel{
 		//jPnlState = new JPanelListState();
 		//this.add(jPnlState);
 		
+		
 		restart = new JPanelTableRestart(transition);
 		restart.setBounds(0, (MainWindow.DEFOULT_DIMENSION.height/2), (DEFAUL_WIDTH/5)-10, (int) (MainWindow.DEFOULT_DIMENSION.height*1.4));
 		add(restart);
+		
+		comunicate = new JPanelTableComunicate(transition);
+		comunicate.setBounds((DEFAUL_WIDTH/5),(MainWindow.DEFOULT_DIMENSION.height/2) , (DEFAUL_WIDTH/5)-10, (int) (MainWindow.DEFOULT_DIMENSION.height*1.4));
+		add(comunicate);
 		
 		distroyed = new JPanelTableDistroyed(transition);
 		distroyed.setBounds((DEFAUL_WIDTH/5)*2, (MainWindow.DEFOULT_DIMENSION.height/2), (DEFAUL_WIDTH/5)-10, (int) (MainWindow.DEFOULT_DIMENSION.height*1.4));
@@ -68,6 +74,38 @@ public class JPanelFunction extends JPanel{
 	    add(ready);
 	    
 	    
+	}
+
+	public JPanelTableTimeout getTimeout() {
+		return timeout;
+	}
+
+	public void setTimeout(JPanelTableTimeout timeout) {
+		this.timeout = timeout;
+	}
+
+	public JPanelTableDistroyed getDistroyed() {
+		return distroyed;
+	}
+
+	public void setDistroyed(JPanelTableDistroyed distroyed) {
+		this.distroyed = distroyed;
+	}
+
+	public JPanelTableRestart getRestart() {
+		return restart;
+	}
+
+	public void setRestart(JPanelTableRestart restart) {
+		this.restart = restart;
+	}
+
+	public JPanelTableComunicate getComunicate() {
+		return comunicate;
+	}
+
+	public void setComunicate(JPanelTableComunicate comunicate) {
+		this.comunicate = comunicate;
 	}
 
 	public JPanelTableRunning getRunning() {

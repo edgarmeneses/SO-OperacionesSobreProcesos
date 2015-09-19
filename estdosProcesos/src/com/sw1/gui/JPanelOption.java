@@ -28,9 +28,13 @@ public class JPanelOption extends JPanel {
 	private JPanelTableLocked locked;
 	private JPanelTableFinished finished;
 	private JPanelTableRunning running;
+	private JPanelTableComunicate comunicate;
+	private JPanelTableDistroyed distroyed;
+	private JPanelTableRestart restart;
+	private JPanelTableTimeout timeout;
 
 	public JPanelOption(Transition transition, JPanelReady ready, JPanelProcess process, JPanelTableLocked locked,
-			JPanelTableFinished finished, JPanelTableRunning running, MainWindow window) {
+			JPanelTableFinished finished, JPanelTableRunning running, MainWindow window, JPanelTableComunicate comunicate,JPanelTableDistroyed distroyed,JPanelTableRestart restart,JPanelTableTimeout timeout) {
 
 		this.transition=transition;
 		this.ready=ready;
@@ -39,6 +43,10 @@ public class JPanelOption extends JPanel {
 		this.finished = finished;
 		this.running = running;
 		this.window = window;
+		this.comunicate= comunicate;
+		this.distroyed=distroyed;
+		this.restart=restart;
+		this.timeout=timeout;
 		
 		this.setLayout(null);
 		this.setBackground(new Color(223,211,182));
@@ -129,6 +137,10 @@ public class JPanelOption extends JPanel {
 					locked.removeTable();
 					finished.removeTable();
 					running.removeTable();
+					comunicate.removeTable();
+					distroyed.removeTable();
+					restart.removeTable();
+					timeout.removeTable();
 				}else{
 					JOptionPane.showMessageDialog(null, "Para ejecutar deben existir procesos");
 				}
@@ -223,5 +235,6 @@ public class JPanelOption extends JPanel {
 		mainFrame.setVisible(true);
 		mainFrame.pack();
 	}
+	
 
 }

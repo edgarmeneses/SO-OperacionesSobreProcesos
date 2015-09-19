@@ -81,6 +81,7 @@ public class Running {
 	}
 
 	public void add(Process process){
+		System.out.println(process);
 		process.setState(State.RUNNING);
 		comunicate(process);
 		running.add(process);

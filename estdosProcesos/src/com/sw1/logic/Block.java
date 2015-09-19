@@ -67,7 +67,13 @@ public class Block {
 				ready.getRunning().getTransition().addRestart(process);
 			}
 			ready.getRunning().getTransition().destroyProcess(process, listLocked);
+			listLocked.remove(process);
 		}else if(process.isRestart()){
+			if(listLocked.get(0).getTime()<=ready.getRunning().getTransition().getQuantum()){
+				listLocked.get(0).setLocked(false);
+			}
+			
+			listLocked.remove(process);
 			ready.getRunning().getTransition().addRestart(process);
 			ready.add(process);
 		}
