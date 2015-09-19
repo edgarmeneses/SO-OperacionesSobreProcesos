@@ -15,6 +15,7 @@ public class JPanelFunction extends JPanel{
 	private JPanelTableFinished finished;
 	private JPanelReady ready;
 	private JPanelProcess process;
+	private JPanelTableDistroyed distroyed;
 	private Transition transition;
 	private int DEFAUL_WIDTH=(MainWindow.DEFOULT_DIMENSION.width/7)*6;
 	
@@ -33,17 +34,21 @@ public class JPanelFunction extends JPanel{
 		//this.add(jPnlState);
 		
 		running = new JPanelTableRunning(transition);
-		running.setBounds(0, MainWindow.DEFOULT_DIMENSION.height/2, (DEFAUL_WIDTH/3)-10, (int) (MainWindow.DEFOULT_DIMENSION.height*1.4));
+		running.setBounds(0, MainWindow.DEFOULT_DIMENSION.height/2, (DEFAUL_WIDTH/4)-10, (int) (MainWindow.DEFOULT_DIMENSION.height*1.4));
 		add(running);
 		
 		
 		locked = new JPanelTableLocked(transition);
-		locked.setBounds((DEFAUL_WIDTH/3), MainWindow.DEFOULT_DIMENSION.height/2, (DEFAUL_WIDTH/3)-10, (int) (MainWindow.DEFOULT_DIMENSION.height*1.4));
+		locked.setBounds((DEFAUL_WIDTH/4), MainWindow.DEFOULT_DIMENSION.height/2, (DEFAUL_WIDTH/4)-10, (int) (MainWindow.DEFOULT_DIMENSION.height*1.4));
 	    add(locked);
 	    
 	    finished = new JPanelTableFinished(transition);
-		finished.setBounds((DEFAUL_WIDTH/3)*2, (MainWindow.DEFOULT_DIMENSION.height/2), (DEFAUL_WIDTH/3)-10,(int) (MainWindow.DEFOULT_DIMENSION.height*1.4));
+		finished.setBounds((DEFAUL_WIDTH/4)*2, (MainWindow.DEFOULT_DIMENSION.height/2), (DEFAUL_WIDTH/4)-10,(int) (MainWindow.DEFOULT_DIMENSION.height*1.4));
 	    add(finished);
+	    
+	    distroyed = new JPanelTableDistroyed(transition);
+		distroyed.setBounds((DEFAUL_WIDTH/4)*3, (MainWindow.DEFOULT_DIMENSION.height/2), (DEFAUL_WIDTH/4)-10,(int) (MainWindow.DEFOULT_DIMENSION.height*1.4));
+	    add(distroyed);
 	    
 	    process = new JPanelProcess(transition);
 	    process.setBounds( DEFAUL_WIDTH/2, 0, (DEFAUL_WIDTH/2)-10,(int) (MainWindow.DEFOULT_DIMENSION.height*1.4)-20);

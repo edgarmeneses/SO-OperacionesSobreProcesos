@@ -39,11 +39,11 @@ public class MainWindow extends JFrame{
 		System.out.println(this.getSize());
 
 		panelFunction = new JPanelFunction(transition);
-		panelFunction.setBounds(0, 0, ((DEFOULT_DIMENSION.width/7)*6), DEFOULT_DIMENSION.height);
+		panelFunction.setBounds(0, 0, ((DEFOULT_DIMENSION.width/8)*7), DEFOULT_DIMENSION.height);
 
 		panelOption = new JPanelOption(transition,panelFunction.getReady(),panelFunction.getProcess(),
 				panelFunction.getLocked(),panelFunction.getFinished(),panelFunction.getRunning(),this);
-		panelOption.setBounds(((DEFOULT_DIMENSION.width/7)*6), 0, DEFOULT_DIMENSION.width/5, DEFOULT_DIMENSION.height);
+		panelOption.setBounds(((DEFOULT_DIMENSION.width/8)*7), 0, DEFOULT_DIMENSION.width/7, DEFOULT_DIMENSION.height);
 
 		add(panelFunction);
 		add(panelOption);

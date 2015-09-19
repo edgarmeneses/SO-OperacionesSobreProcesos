@@ -29,7 +29,7 @@ public class JPanelTableLocked extends JPanel{
 	}
 
 	public void init(){
-		this.setLayout(new GridLayout(3, 2));
+		this.setLayout(new GridLayout(4, 3));
 		this.setBorder(new TitledBorder("Bloqueo"));
 	}
 
