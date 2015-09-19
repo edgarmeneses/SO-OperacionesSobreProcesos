@@ -28,7 +28,7 @@ public class JPanelTableDistroyed extends JPanel {
 
 	public void init(){
 		this.setBorder(new TitledBorder("Destruidos"));
-		this.setLayout(new GridLayout(4, 3));
+		this.setLayout(new GridLayout(3, 2));
 	}
 
 	public void tableFinished(){
