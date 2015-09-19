@@ -18,8 +18,8 @@ import com.sw1.logic.Transition;
 
 public class ReadyHistoricalTableModel extends AbstractTableModel implements Runnable{
 
-	private static final String [] COLUMNNAMES={"Nombre","Prioridad","tiempo","Bloqueo"};
-	private static final Class[] COLUMNSTYPES ={String.class,Integer.class,Integer.class,Boolean.class};
+	private static final String [] COLUMNNAMES={"Nombre","Tiempo"};
+	private static final Class[] COLUMNSTYPES ={String.class,Integer.class};
 	private ArrayList<Object[]> data;
 	private Transition transition;
 	
@@ -33,13 +33,13 @@ public class ReadyHistoricalTableModel extends AbstractTableModel implements Run
 	
 	public void fill(){
 		for (Process process : transition.getReady().getHistoricalReady()) {
-			data.add(fillRow(process.getName(),process.getPriority(),process.getTime(),process.isLocked()));
+			data.add(fillRow(process.getName(),process.getTime()));
 		}
 		
 	}
 
-	public Object[] fillRow(String name, int priority, int time, boolean isBlock){
-		return new Object[]{name,priority,time,isBlock};
+	public Object[] fillRow(String name,int time){
+		return new Object[]{name,time};
 	}
 	
 

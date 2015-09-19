@@ -19,7 +19,7 @@ import com.sw1.logic.Transition;
 
 public class RunningTableModel extends AbstractTableModel implements Runnable{
 
-	private static final String [] COLUMNNAMES={"Nombre","tiempo"};
+	private static final String [] COLUMNNAMES={"Nombre","Tiempo"};
 	private static final Class[] COLUMNSTYPES ={String.class,Integer.class};
 	private ArrayList<Object[]> data;
 	private Transition transition;
