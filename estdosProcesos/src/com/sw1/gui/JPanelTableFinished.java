@@ -27,7 +27,7 @@ public class JPanelTableFinished extends JPanel {
 
 	public void init(){
 		this.setBorder(new TitledBorder("Fializado"));
-		this.setLayout(new GridLayout(4, 3));
+		this.setLayout(new GridLayout(3, 2));
 	}
 
 	public void tableFinished(){

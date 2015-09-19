@@ -31,7 +31,7 @@ public class JPanelTableRunning extends JPanel {
 	}
 
 	public void init(){
-		this.setLayout(new GridLayout(4, 3));
+		this.setLayout(new GridLayout(3, 2));
 		this.setBorder(new TitledBorder("En Ejecucion"));
 	}
 
